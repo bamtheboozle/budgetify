@@ -1,0 +1,12 @@
+{
+  "name": "budgetify",
+  "displayName": "budgetify",
+  "expo": {
+    "name": "budgetify",
+    "slug": "budgetify",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
