@@ -1,0 +1,18 @@
+{
+  "settings": {
+    "import/ignore": ["react-native"],
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx"]
+      }
+    }
+  },
+  "rules": {
+    "react/require-extension": "off",
+    "react-native/no-color-literals": "off",
+    "import/no-named-as-default": "off",
+    "arrow-body-style": "off",
+    "react/prop-types": "warn"
+  },
+  "extends": ["react-native"]
+}
