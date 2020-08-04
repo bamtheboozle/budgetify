@@ -12,7 +12,9 @@
     "react-native/no-color-literals": "off",
     "import/no-named-as-default": "off",
     "arrow-body-style": "off",
-    "react/prop-types": "warn"
+    "react/prop-types": "warn",
+    "react/jsx-no-bind": "off",
+    "react/display-name": "off"
   },
   "extends": ["react-native"]
 }

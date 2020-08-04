@@ -8,13 +8,13 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     backgroundColor: Colour.DarkerLightBlue,
     width: "48%",
-    paddingVertical: 20,
+    paddingVertical: 10,
+    paddingTop: 20,
     paddingHorizontal: 15,
     borderRadius: 10,
     shadowColor: "rgba(0, 0, 0, 0.2)",
     shadowRadius: 10,
     shadowOpacity: 0.2,
-    overflow: "hidden",
   },
   header: {
     display: "flex",
@@ -59,6 +59,7 @@ const styles = StyleSheet.create({
   },
   bar: {
     width: "100%",
+    height: 100,
     borderRadius: 20,
     backgroundColor: Colours.LighterLightBlue,
   },

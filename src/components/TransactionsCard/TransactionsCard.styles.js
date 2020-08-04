@@ -8,7 +8,6 @@ const styles = StyleSheet.create({
     flexDirection: "column",
     backgroundColor: Colours.White,
     width: "48%",
-    height: 330,
     borderRadius: 10,
     shadowColor: "rgba(0, 0, 0, 0.2)",
     shadowRadius: 10,
@@ -25,8 +24,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-around",
     alignItems: "center",
-    marginTop: 20,
-    marginBottom: 10,
+    marginVertical: 10,
   },
   text: {
     color: Colours.GrayText,

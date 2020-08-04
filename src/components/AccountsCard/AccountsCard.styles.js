@@ -15,9 +15,9 @@ const styles = StyleSheet.create({
   scrollView: {
     marginVertical: 10,
     paddingHorizontal: 10,
+    overflow: "scroll",
   },
   subcard: {
-    height: "25%",
     backgroundColor: "red",
     borderRadius: 5,
     marginVertical: 5,

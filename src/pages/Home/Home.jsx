@@ -1,5 +1,6 @@
 import React from "react";
-import { Text, View } from "react-native";
+import { StatusBar } from "expo-status-bar";
+import { Text, SafeAreaView, ScrollView, View } from "react-native";
 import { FontAwesome } from "@expo/vector-icons";
 
 import AccountsCard from "../../components/AccountsCard";
@@ -7,28 +8,32 @@ import PeriodSpendingCard from "../../components/PeriodSpendingCard";
 import TransactionsCard from "../../components/TransactionsCard";
 import RemainingBudgetCard from "../../components/RemainingBudgetCard";
 
-import NavigationTab from "../../NavigationTab";
-import { PAGES } from "../../NavigationTab/NavigationTab";
-
 import styles from "./Home.styles";
+import Colours from "../../colours/colourScheme";
 
 const Home = () => {
   return (
-    <View style={styles.lead}>
-      <View style={styles.greetingLead}>
-        <Text style={styles.greeting}>Hello, bamtheboozle</Text>
-        <FontAwesome name="user-circle-o" size={40} color="black" />
+    <SafeAreaView style={styles.lead}>
+      <StatusBar style="auto" />
+      <View style={styles.container}>
+        <View style={styles.greetingLead}>
+          <Text style={styles.greeting}>Hello, bamtheboozle</Text>
+          <FontAwesome
+            name="user-circle-o"
+            size={32}
+            color={Colours.GrayText}
+          />
+        </View>
+        <View style={styles.row}>
+          <PeriodSpendingCard></PeriodSpendingCard>
+          <AccountsCard></AccountsCard>
+        </View>
+        <View style={styles.row}>
+          <TransactionsCard></TransactionsCard>
+          <RemainingBudgetCard></RemainingBudgetCard>
+        </View>
       </View>
-      <View style={styles.row}>
-        <PeriodSpendingCard></PeriodSpendingCard>
-        <AccountsCard></AccountsCard>
-      </View>
-      <View style={styles.row}>
-        <TransactionsCard></TransactionsCard>
-        <RemainingBudgetCard></RemainingBudgetCard>
-      </View>
-      <NavigationTab activePage={PAGES.Home} />
-    </View>
+    </SafeAreaView>
   );
 };
 

@@ -1,5 +1,6 @@
 import { StyleSheet } from "react-native";
 import normalize from "../../utils/fontSizeUtils";
+import Colours from "../../colours/colourScheme";
 
 const styles = StyleSheet.create({
   lead: {
@@ -7,8 +8,14 @@ const styles = StyleSheet.create({
     flex: 1,
     display: "flex",
   },
+  container: {
+    display: "flex",
+    flexDirection: "column",
+    flex: 1,
+  },
   row: {
     display: "flex",
+    flex: 1,
     flexDirection: "row",
     justifyContent: "space-between",
     margin: 10,
@@ -19,12 +26,12 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
     paddingHorizontal: 20,
-    paddingBottom: 20,
-    paddingTop: 10,
+    paddingVertical: 10,
   },
   greeting: {
-    fontSize: normalize(24),
+    fontSize: normalize(22),
     fontWeight: "700",
+    color: Colours.EvenDarkerLightBlue,
   },
 });
 

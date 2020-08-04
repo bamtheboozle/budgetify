@@ -47,8 +47,8 @@ const CircularProgress = ({
           fontFamily="System, 'Segoe UI', Roboto, Ubuntu, 'Helvetica Neue', sans-serif"
           fontSize={textSize || "10"}
           fontWeight="700"
-          x={size / 2}
-          y={size / 2 + (textSize ? textSize / 2 - 1 : 5)}
+          x={size / 2 + 3}
+          y={size / 2 + (textSize ? textSize / 2 - 3 : 5)}
           textAnchor="middle"
           fill={textColor || "#333333"}
         >

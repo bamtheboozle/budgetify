@@ -6,6 +6,7 @@ import CircularProgress from "./CircularProgress";
 
 import styles from "./RemainingBudgetCard.styles";
 import Colours from "../../colours/colourScheme";
+import normalize from "../../utils/fontSizeUtils";
 
 const RemainingBudgetCard = () => {
   return (
@@ -19,13 +20,13 @@ const RemainingBudgetCard = () => {
       </View>
       <View>
         <CircularProgress
-          size={128}
-          strokeWidth={20}
+          size={normalize(100)}
+          strokeWidth={normalize(14)}
           bgColor={Colours.White}
           pgColor={Colours.DarkerBlue}
           progress={37}
           text="63%"
-          textSize={24}
+          textSize={normalize(22)}
           textColor={Colours.White}
         />
       </View>

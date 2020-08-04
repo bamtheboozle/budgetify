@@ -7,7 +7,6 @@ const styles = StyleSheet.create({
   lead: {
     backgroundColor: Colour.BlueText,
     width: "48%",
-    height: 330,
     paddingVertical: 20,
     paddingHorizontal: 10,
     borderRadius: 10,
