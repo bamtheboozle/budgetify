@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Text, View } from "react-native";
-import { AntDesign, Entypo } from "@expo/vector-icons";
+import { AntDesign, FontAwesome5 } from "@expo/vector-icons";
 
 import styles from "./PeriodSpendingCard.styles";
 import Colours from "../../colours/colourScheme";
+import normalize from "../../utils/fontSizeUtils";
 
 const mock = {
   total: 549.58,
@@ -13,6 +14,7 @@ const mock = {
 
 const PeriodSpendingCard = () => {
   const [data, setData] = useState(mock);
+  const [maxChartHeight, setMaxChartHeight] = useState(100);
   useEffect(() => {
     setData(mock);
   }, []);
@@ -22,7 +24,11 @@ const PeriodSpendingCard = () => {
   return (
     <View style={styles.lead}>
       <View style={styles.header}>
-        <AntDesign name="linechart" size={30} color={Colours.White} />
+        <AntDesign
+          name="linechart"
+          size={normalize(28)}
+          color={Colours.White}
+        />
         <View style={styles.heading}>
           <Text style={styles.text}>Expenses</Text>
           <Text style={styles.subtitle}>last 7 days</Text>
@@ -30,18 +36,32 @@ const PeriodSpendingCard = () => {
       </View>
       <View style={styles.spentView}>
         <Text style={styles.spentText}>
-          <Entypo name="credit" size={28} color={Colours.White} />
+          <FontAwesome5
+            name="dollar-sign"
+            size={normalize(28)}
+            color={Colours.White}
+          />{" "}
           {spentArr[0]}
           <Text style={styles.spentDecimal}>.{spentArr[1]}</Text>
         </Text>
       </View>
-      <View style={styles.weeklyChart}>
+      <View
+        style={styles.weeklyChart}
+        onLayout={(event) => {
+          const { height } = event.nativeEvent.layout;
+          setMaxChartHeight(height - 25);
+        }}
+      >
         {data.weeklyData.map((dailySpend, index) => (
           <View key={index} style={styles.barContainer}>
             <View
               style={[
                 styles.bar,
-                { height: Math.floor((dailySpend / maxDailySpend) * 100) },
+                {
+                  height: Math.floor(
+                    (dailySpend / maxDailySpend) * maxChartHeight
+                  ),
+                },
               ]}
             ></View>
             <Text style={styles.barText}>{data.days[index]}</Text>

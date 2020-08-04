@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
     color: Colours.GrayText,
     fontWeight: "700",
     fontSize: normalize(12),
-    marginLeft: 5,
+    marginLeft: 10,
     marginRight: 20,
   },
   amount: {

@@ -1,10 +1,11 @@
 import React from "react";
 import { Text, View } from "react-native";
-import { Entypo, AntDesign } from "@expo/vector-icons";
+import { FontAwesome5, AntDesign } from "@expo/vector-icons";
 
 import styles from "./TransactionRow.styles";
 import Colours from "../../colours/colourScheme";
 import TransactionIcon from "../TransactionIcon/TransactionIcon";
+import normalize from "../../utils/fontSizeUtils";
 
 const TransactionRow = ({ transaction }) => {
   return (
@@ -19,8 +20,12 @@ const TransactionRow = ({ transaction }) => {
         </Text>
       </View>
       <Text style={styles.amount}>
-        <AntDesign name="minus" size={16} color={Colours.BrightRed} />
-        <Entypo name="credit" size={16} color={Colours.BrightRed} />
+        -
+        <FontAwesome5
+          name="dollar-sign"
+          size={normalize(14)}
+          color={Colours.BrightRed}
+        />{" "}
         {transaction.amount}
       </Text>
     </View>

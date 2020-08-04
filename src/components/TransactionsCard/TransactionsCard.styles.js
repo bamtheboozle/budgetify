@@ -22,9 +22,10 @@ const styles = StyleSheet.create({
   header: {
     display: "flex",
     flexDirection: "row",
-    justifyContent: "space-around",
+    justifyContent: "flex-start",
     alignItems: "center",
     marginVertical: 10,
+    paddingHorizontal: 15,
   },
   text: {
     color: Colours.GrayText,

@@ -2,6 +2,7 @@ import React from "react";
 import { AntDesign, Fontisto, MaterialIcons } from "@expo/vector-icons";
 
 import { CATEGORY } from "../../types/TransactionTypes";
+import normalize from "../../utils/fontSizeUtils";
 
 const CATEGORY_TO_ANT_ICON = {
   [CATEGORY.Car]: "car",
@@ -25,21 +26,21 @@ const TransactionIcon = ({ category, colour }) => {
       {ANTcategories.includes(category) && (
         <AntDesign
           name={CATEGORY_TO_ANT_ICON[category]}
-          size={18}
+          size={normalize(18)}
           color={colour}
         />
       )}
       {FontistoCategories.includes(category) && (
         <Fontisto
           name={CATEGORY_TO_FONTISTO_ICON[category]}
-          size={18}
+          size={normalize(18)}
           color={colour}
         />
       )}
       {MaterialIconsCategories.includes(category) && (
         <MaterialIcons
           name={CATEGORY_TO_MATERIAL_ICONS[category]}
-          size={16}
+          size={normalize(16)}
           color={colour}
         />
       )}

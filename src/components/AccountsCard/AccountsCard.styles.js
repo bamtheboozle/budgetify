@@ -26,6 +26,9 @@ const styles = StyleSheet.create({
     display: "flex",
     justifyContent: "space-around",
   },
+  lastSubCard: {
+    marginBottom: 0,
+  },
   checking: {
     backgroundColor: Colour.LightBlueBackground,
   },
@@ -35,38 +38,38 @@ const styles = StyleSheet.create({
   debt: {
     backgroundColor: Colour.GrayBackground,
   },
+  name: {
+    fontWeight: "500",
+    fontSize: normalize(16),
+    display: "flex",
+    alignItems: "center",
+  },
+  amount: {
+    fontWeight: "700",
+    fontSize: normalize(18),
+    alignSelf: "flex-end",
+    marginTop: 5,
+  },
   checkingText: {
     color: Colour.LightBlueText,
-    fontWeight: "500",
-    fontSize: normalize(14),
   },
   checkingAmount: {
     color: Colour.LightBlueText,
-    fontWeight: "700",
-    fontSize: normalize(16),
   },
   savingText: {
     color: Colour.BlueText,
-    fontWeight: "500",
-    fontSize: normalize(14),
   },
   savingAmount: {
     color: Colour.BlueText,
-    fontWeight: "700",
-    fontSize: normalize(16),
   },
   decimals: {
     fontSize: normalize(12),
   },
   debtText: {
     color: Colour.GrayText,
-    fontWeight: "500",
-    fontSize: normalize(14),
   },
   debtAmount: {
     color: Colour.GrayText,
-    fontWeight: "700",
-    fontSize: normalize(16),
   },
 });
 

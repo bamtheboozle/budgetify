@@ -12,7 +12,11 @@ const RemainingBudgetCard = () => {
   return (
     <View style={styles.lead}>
       <View style={styles.header}>
-        <FontAwesome5 name="circle-notch" size={30} color={Colours.White} />
+        <FontAwesome5
+          name="circle-notch"
+          size={normalize(30)}
+          color={Colours.White}
+        />
         <View style={styles.heading}>
           <Text style={styles.text}>Remaining</Text>
           <Text style={styles.subtitle}>current period</Text>
@@ -32,7 +36,11 @@ const RemainingBudgetCard = () => {
       </View>
       <View style={styles.content}>
         <Text style={styles.amount}>
-          <Entypo name="credit" size={20} color={Colours.White} />
+          <FontAwesome5
+            name="dollar-sign"
+            size={normalize(26)}
+            color={Colours.White}
+          />{" "}
           5,301
           <Text style={styles.decimals}>.28</Text>
         </Text>

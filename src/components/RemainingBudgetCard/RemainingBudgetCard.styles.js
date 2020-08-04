@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   amount: {
-    fontSize: normalize(28),
+    fontSize: normalize(26),
     color: Colours.White,
     fontWeight: "700",
   },

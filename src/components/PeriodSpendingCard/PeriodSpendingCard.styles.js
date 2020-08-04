@@ -8,8 +8,6 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     backgroundColor: Colour.DarkerLightBlue,
     width: "48%",
-    paddingVertical: 10,
-    paddingTop: 20,
     paddingHorizontal: 15,
     borderRadius: 10,
     shadowColor: "rgba(0, 0, 0, 0.2)",
@@ -21,6 +19,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-around",
     alignItems: "center",
+    flex: 0.3,
   },
   heading: {
     alignItems: "center",
@@ -37,6 +36,7 @@ const styles = StyleSheet.create({
   },
   spentView: {
     alignItems: "center",
+    flex: 0.4,
   },
   spentText: {
     fontSize: normalize(28),
@@ -50,7 +50,9 @@ const styles = StyleSheet.create({
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-between",
-    alignItems: "baseline",
+    alignItems: "flex-end",
+    paddingBottom: 10,
+    flex: 0.8,
   },
   barContainer: {
     justifyContent: "center",
@@ -67,6 +69,7 @@ const styles = StyleSheet.create({
     color: Colours.White,
     fontWeight: "700",
     marginTop: 5,
+    fontSize: normalize(12),
   },
 });
 
