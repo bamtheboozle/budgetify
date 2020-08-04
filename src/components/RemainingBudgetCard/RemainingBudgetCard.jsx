@@ -1,6 +1,6 @@
 import React from "react";
 import { Text, View } from "react-native";
-import { Entypo, FontAwesome5 } from "@expo/vector-icons";
+import { FontAwesome5 } from "@expo/vector-icons";
 
 import CircularProgress from "./CircularProgress";
 

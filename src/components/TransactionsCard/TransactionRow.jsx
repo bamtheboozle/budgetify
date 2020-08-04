@@ -1,6 +1,6 @@
 import React from "react";
 import { Text, View } from "react-native";
-import { FontAwesome5, AntDesign } from "@expo/vector-icons";
+import { FontAwesome5 } from "@expo/vector-icons";
 
 import styles from "./TransactionRow.styles";
 import Colours from "../../colours/colourScheme";

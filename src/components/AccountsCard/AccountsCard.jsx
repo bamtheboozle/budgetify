@@ -17,7 +17,7 @@ const AccountsCard = () => {
         <View style={[styles.subcard, styles.checking]}>
           <Text style={[styles.name, styles.checkingText]}>
             <AntDesign
-              style={{ marginRight: 5 }}
+              styles={styles.marginRight}
               name="creditcard"
               size={normalize(16)}
               color={Colours.LightBlueText}
@@ -37,7 +37,7 @@ const AccountsCard = () => {
         <View style={[styles.subcard, styles.checking]}>
           <Text style={[styles.name, styles.checkingText]}>
             <AntDesign
-              style={{ marginRight: 5 }}
+              styles={styles.marginRight}
               name="creditcard"
               size={normalize(16)}
               color={Colours.LightBlueText}
@@ -57,7 +57,7 @@ const AccountsCard = () => {
         <View style={[styles.subcard, styles.saving]}>
           <Text style={[styles.name, styles.savingText]}>
             <MaterialCommunityIcons
-              style={{ marginRight: 3 }}
+              styles={styles.marginRight}
               name="bank-outline"
               size={normalize(16)}
               color={Colours.BlueText}
@@ -77,7 +77,7 @@ const AccountsCard = () => {
         <View style={[styles.subcard, styles.debt, styles.lastSubCard]}>
           <Text style={[styles.name, styles.debtText]}>
             <FontAwesome5
-              style={{ marginRight: 5 }}
+              styles={styles.marginRight}
               name="credit-card"
               size={normalize(16)}
               color={Colours.GrayText}

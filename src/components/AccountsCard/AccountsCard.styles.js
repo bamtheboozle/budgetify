@@ -71,6 +71,9 @@ const styles = StyleSheet.create({
   debtAmount: {
     color: Colour.GrayText,
   },
+  marginRight: {
+    marginRight: 5,
+  },
 });
 
 export default styles;
