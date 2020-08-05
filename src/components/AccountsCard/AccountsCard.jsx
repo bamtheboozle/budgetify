@@ -15,84 +15,94 @@ const AccountsCard = () => {
     <View style={styles.lead}>
       <ScrollView style={styles.scrollView}>
         <View style={[styles.subcard, styles.checking]}>
-          <Text style={[styles.name, styles.checkingText]}>
+          <View style={styles.iconAndName}>
             <AntDesign
               style={styles.marginRight}
               name="creditcard"
               size={normalize(16)}
               color={Colours.LightBlueText}
-            />{" "}
-            ING
-          </Text>
-          <Text style={[styles.amount, styles.checkingAmount]}>
+            />
+            <Text style={[styles.name, styles.checkingText]}>ING</Text>
+          </View>
+          <View style={styles.iconAndAmount}>
             <FontAwesome5
               name="dollar-sign"
               size={normalize(16)}
               color={Colours.LightBlueText}
-            />{" "}
-            15,728
-            <Text style={styles.decimals}>.72</Text>
-          </Text>
+            />
+            <Text style={[styles.amount, styles.checkingAmount]}>
+              15,728
+              <Text style={styles.decimals}>.72</Text>
+            </Text>
+          </View>
         </View>
         <View style={[styles.subcard, styles.checking]}>
-          <Text style={[styles.name, styles.checkingText]}>
+          <View style={styles.iconAndName}>
             <AntDesign
               style={styles.marginRight}
               name="creditcard"
               size={normalize(16)}
               color={Colours.LightBlueText}
-            />{" "}
-            Raiffeisen
-          </Text>
-          <Text style={[styles.amount, styles.checkingAmount]}>
+            />
+            <Text style={[styles.name, styles.checkingText]}>Raiffeisen</Text>
+          </View>
+          <View style={styles.iconAndAmount}>
             <FontAwesome5
               name="dollar-sign"
               size={normalize(16)}
               color={Colours.LightBlueText}
-            />{" "}
-            4,982
-            <Text style={styles.decimals}>.49</Text>
-          </Text>
+            />
+            <Text style={[styles.amount, styles.checkingAmount]}>
+              4,982
+              <Text style={styles.decimals}>.49</Text>
+            </Text>
+          </View>
         </View>
         <View style={[styles.subcard, styles.saving]}>
-          <Text style={[styles.name, styles.savingText]}>
+          <View style={styles.iconAndName}>
             <MaterialCommunityIcons
-              style={styles.marginRight}
               name="bank-outline"
               size={normalize(16)}
               color={Colours.BlueText}
-            />{" "}
-            Savings
-          </Text>
-          <Text numberOfLines={2} style={[styles.amount, styles.savingAmount]}>
+            />
+            <Text style={[styles.name, styles.savingText]}>Savings</Text>
+          </View>
+          <View style={styles.iconAndAmount}>
             <FontAwesome5
               name="dollar-sign"
               size={normalize(16)}
               color={Colours.BlueText}
-            />{" "}
-            2,827,212
-            <Text style={styles.decimals}>.72</Text>
-          </Text>
+            />
+            <Text
+              numberOfLines={2}
+              style={[styles.amount, styles.savingAmount]}
+            >
+              2,827,212
+              <Text style={styles.decimals}>.72</Text>
+            </Text>
+          </View>
         </View>
         <View style={[styles.subcard, styles.debt, styles.lastSubCard]}>
-          <Text style={[styles.name, styles.debtText]}>
+          <View style={styles.iconAndName}>
             <FontAwesome5
               style={styles.marginRight}
               name="credit-card"
-              size={normalize(16)}
+              size={normalize(14)}
               color={Colours.GrayText}
-            />{" "}
-            Debt
-          </Text>
-          <Text style={[styles.amount, styles.debtAmount]}>
+            />
+            <Text style={[styles.name, styles.debtText]}>Debt</Text>
+          </View>
+          <View style={styles.iconAndAmount}>
             <FontAwesome5
               name="dollar-sign"
               size={normalize(16)}
               color={Colours.GrayText}
-            />{" "}
-            1,384
-            <Text style={styles.decimals}>.18</Text>
-          </Text>
+            />
+            <Text style={[styles.amount, styles.debtAmount]}>
+              1,384
+              <Text style={styles.decimals}>.18</Text>
+            </Text>
+          </View>
         </View>
       </ScrollView>
     </View>

@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
     backgroundColor: "red",
     borderRadius: 5,
     marginVertical: 5,
-    paddingVertical: 12,
+    paddingVertical: 10,
     paddingHorizontal: 10,
     display: "flex",
     justifyContent: "space-around",
@@ -40,14 +40,13 @@ const styles = StyleSheet.create({
   },
   name: {
     fontWeight: "500",
-    fontSize: normalize(16),
+    fontSize: normalize(14),
     display: "flex",
     alignItems: "center",
   },
   amount: {
     fontWeight: "700",
-    fontSize: normalize(18),
-    alignSelf: "flex-end",
+    fontSize: normalize(16),
     marginTop: 5,
   },
   checkingText: {
@@ -58,6 +57,7 @@ const styles = StyleSheet.create({
   },
   savingText: {
     color: Colour.BlueText,
+    marginLeft: 5,
   },
   savingAmount: {
     color: Colour.BlueText,
@@ -67,12 +67,24 @@ const styles = StyleSheet.create({
   },
   debtText: {
     color: Colour.GrayText,
+    marginLeft: 2,
   },
   debtAmount: {
     color: Colour.GrayText,
   },
   marginRight: {
     marginRight: 5,
+  },
+  iconAndName: {
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+  },
+  iconAndAmount: {
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "baseline",
+    justifyContent: "flex-end",
   },
 });
 
