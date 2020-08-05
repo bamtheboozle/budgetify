@@ -1,13 +1,17 @@
 {
-  "name": "budgetify",
-  "displayName": "budgetify",
   "expo": {
-    "name": "budgetify",
-    "slug": "budgetify",
-    "version": "1.0.0",
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "name": "save.",
+    "version": "0.0.1",
+    "slug": "save",
+    "ios": {
+      "bundleIdentifier": "com.bamtheboozle.save",
+      "buildNumber": "0.0.1"
+    },
+    "android": {
+      "package": "com.bamtheboozle.save",
+      "versionCode": 1
+    },
+    "assetBundlePatterns": ["**/*"],
     "description": ""
   }
 }
