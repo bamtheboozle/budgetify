@@ -1,7 +1,7 @@
 import React from "react";
 import { AntDesign } from "@expo/vector-icons";
 import Colours from "../colours/colourScheme";
-import { PAGES } from "../../App";
+import PAGES from "../types/Pages";
 
 export const generateIconFromRoute = (name) => {
   if (name === PAGES.Home) return "home";

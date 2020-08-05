@@ -1,7 +1,7 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 
-import { PAGES } from "../../App";
+import PAGES from "../types/Pages";
 
 import GetStartedPage from "../pages/GetStartedPage";
 import AuthPage from "../pages/AuthPage";

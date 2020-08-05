@@ -1,7 +1,7 @@
 import React from "react";
 import { SafeAreaView, View, Text, Button } from "react-native";
 import styles from "./GetStartedPage.styles";
-import { PAGES } from "../../Navigation/Navigation";
+import { PAGES } from "../../navigation/Navigation";
 
 const GetStartedPage = ({ navigation }) => {
   const handleGetStartedPress = () => {

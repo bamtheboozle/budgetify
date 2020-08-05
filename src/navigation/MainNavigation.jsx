@@ -1,7 +1,7 @@
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
-import { PAGES } from "../../App";
+import PAGES from "../types/Pages";
 
 import TabNavigatorItem from "./TabNavigatorItem";
 import HomePage from "../pages/HomePage";
