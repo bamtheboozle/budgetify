@@ -1,61 +1,37 @@
-import React from "react";
-import { NavigationContainer } from "@react-navigation/native";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { AntDesign } from "@expo/vector-icons";
+import React, { useState, useEffect } from "react";
 
-import Home from "./src/pages/Home";
-import Activity from "./src/pages/Activity";
-
-import Colours from "./src/colours/colourScheme";
-import Goals from "./src/pages/Goals";
-import Budgets from "./src/pages/Budgets";
+import Navigation from "./src/navigation/Navigation";
+import AuthContext from "./src/contexts/AuthContext";
+import { fetchAuthState } from "./src/storageHelpers/auth";
 
 export const PAGES = {
+  GetStarted: "GetStarted",
+  Auth: "Auth",
   Home: "Home",
   Activity: "Activity",
   Goals: "Goals",
   Budgets: "Budgets",
 };
 
-const Tab = createBottomTabNavigator();
-
-export const generateIconFromRoute = (name) => {
-  if (name === PAGES.Home) return "home";
-  if (name === PAGES.Activity) return "barschart";
-  if (name === PAGES.Goals) return "staro";
-  if (name === PAGES.Budgets) return "wallet";
-};
-
-const TabNavigatorItem = ({ route, focused }) => {
-  const iconName = generateIconFromRoute(route.name);
-  return (
-    <AntDesign
-      name={iconName}
-      size={24}
-      color={focused ? Colours.BlueText : Colours.GrayText}
-    />
-  );
-};
-
 export default function App() {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+  useEffect(() => {
+    fetchAuthState().then((data) => {
+      if (data !== null) {
+        setIsAuthenticated(data.isAuthenticated);
+      }
+    });
+  }, []);
+
   return (
-    <>
-      <NavigationContainer>
-        <Tab.Navigator
-          initialRouteName={PAGES.Home}
-          screenOptions={({ route }) => ({
-            tabBarIcon: ({ focused }) => (
-              <TabNavigatorItem route={route} focused={focused} />
-            ),
-            tabBarLabel: () => null,
-          })}
-        >
-          <Tab.Screen name={PAGES.Home} component={Home} />
-          <Tab.Screen name={PAGES.Activity} component={Activity} />
-          <Tab.Screen name={PAGES.Goals} component={Goals} />
-          <Tab.Screen name={PAGES.Budgets} component={Budgets} />
-        </Tab.Navigator>
-      </NavigationContainer>
-    </>
+    <AuthContext.Provider
+      value={{
+        isAuthenticated,
+        setIsAuthenticated,
+      }}
+    >
+      <Navigation isAuthenticated={isAuthenticated} />
+    </AuthContext.Provider>
   );
 }

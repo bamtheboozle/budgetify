@@ -7,7 +7,6 @@ const scale = SCREEN_WIDTH / 320;
 
 const normalize = (size) => {
   const newSize = size * scale;
-  console.log(Platform);
 
   let normalizedValue = Math.round(PixelRatio.roundToNearestPixel(newSize)) - 2;
   if (Platform.OS === "ios") {

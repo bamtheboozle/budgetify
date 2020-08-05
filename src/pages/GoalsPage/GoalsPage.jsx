@@ -1,9 +1,9 @@
 import React from "react";
 import { ScrollView, SafeAreaView, Text } from "react-native";
 
-import styles from "./Goals.styles";
+import styles from "./GoalsPage.styles";
 
-const Goals = () => (
+const GoalsPage = () => (
   <SafeAreaView style={styles.lead}>
     <ScrollView>
       <Text style={styles.text}>im goals noob</Text>
@@ -11,4 +11,4 @@ const Goals = () => (
   </SafeAreaView>
 );
 
-export default Goals;
+export default GoalsPage;

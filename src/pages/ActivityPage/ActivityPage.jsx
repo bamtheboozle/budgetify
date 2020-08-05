@@ -1,14 +1,14 @@
 import React from "react";
 import { ScrollView, SafeAreaView, Text } from "react-native";
 
-import styles from "./Budgets.styles";
+import styles from "./ActivityPage.styles";
 
-const Budgets = () => (
+const ActivityPage = () => (
   <SafeAreaView style={styles.lead}>
     <ScrollView>
-      <Text style={styles.text}>im budgets noob</Text>
+      <Text style={styles.text}>im activity noob</Text>
     </ScrollView>
   </SafeAreaView>
 );
 
-export default Budgets;
+export default ActivityPage;

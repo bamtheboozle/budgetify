@@ -1,6 +1,6 @@
 import React from "react";
 import { StatusBar } from "expo-status-bar";
-import { Text, SafeAreaView, ScrollView, View } from "react-native";
+import { Text, SafeAreaView, View } from "react-native";
 import { FontAwesome } from "@expo/vector-icons";
 
 import AccountsCard from "../../components/AccountsCard";
@@ -8,10 +8,10 @@ import PeriodSpendingCard from "../../components/PeriodSpendingCard";
 import TransactionsCard from "../../components/TransactionsCard";
 import RemainingBudgetCard from "../../components/RemainingBudgetCard";
 
-import styles from "./Home.styles";
+import styles from "./HomePage.styles";
 import Colours from "../../colours/colourScheme";
 
-const Home = () => {
+const HomePage = () => {
   return (
     <SafeAreaView style={styles.lead}>
       <StatusBar style="auto" />
@@ -37,4 +37,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomePage;
